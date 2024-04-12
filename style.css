@@ -76,7 +76,7 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url(asses/rosto.jpg);
+    background: url(./assets/rosto.jpg);
     background-size: cover;
     background-position: center;
     
@@ -371,36 +371,23 @@ span {
 }
 
 form {
+    position: relative;
     flex-direction: row;
     justify-content: center;
+    flex-direction: row;
     align-items: center;
-    
-    
-}
-.input-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    gap: 5px;
-    padding-bottom: 5px;   
+    width:100%      
 }
 
-.input-field {
-    width: 25%;
-    height: 5vh;
+form .input-box {
     display: flex;
     justify-content: center;
-    border: .2rem solid var(--main-color);
-    border-radius: 5px;
+    justify-content: space-around;
+    
+    
+
 }
 
-.input-field input{
-    width: 90%;
-    background: var(--bg-color);
-    border-radius: .5rem;
-    
-}
 
 .textarea-field {
     display: flex;
