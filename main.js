@@ -1,3 +1,5 @@
+//cards Images
+
 const skillsList = [
     {skillName: 'Flask', iconURL: 'https://img.icons8.com/nolan/64/flask.png'},
     {skillName: 'Javascript', iconURL: 'https://img.icons8.com/color/48/javascript--v1.png'},
@@ -6,6 +8,7 @@ const skillsList = [
     {skillName: 'Css', iconURL: 'https://img.icons8.com/color/48/css3.png'},
 ];
 
+// function cried cards
 function createSkillsCards() {
     const skillListRef = document.getElementById('skillsList');
     skillsList.forEach((skill) => {
@@ -23,3 +26,58 @@ function createSkillsCards() {
 };
 
 createSkillsCards();
+
+// Toggle icon navbar
+let menuIcon = document.querySelector('#menu-icon');
+let navBar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x');
+    navBar.classList.toggle('active');
+}
+
+
+// Selecione as seções e os links de navegação
+const sections = document.querySelectorAll('section');
+const navLinks = document.querySelectorAll('header nav a');
+
+// Função para verificar se a seção está visível na tela
+function isSectionVisible(section) {
+    const top = window.scrollY;
+    const offset = section.offsetTop - 100;
+    const height = section.offsetHeight;
+    return top >= offset && top < offset + height;
+}
+
+// Ative os links de navegação conforme o usuário rola a página
+function activateNavLinks() {
+    sections.forEach((sec) => {
+        if (isSectionVisible(sec)) {
+            const id = sec.getAttribute('id');
+            navLinks.forEach((link) => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(id)) {
+                    link.classList.add('active');
+                }
+            });
+        }
+    });
+}
+
+// Adicione um evento de rolagem para chamar a função
+window.addEventListener('scroll', activateNavLinks);
+
+// Adicione a classe "sticky" ao cabeçalho quando o usuário rolar mais de 100 pixels
+const header = document.querySelector('header');
+window.addEventListener('scroll', () => {
+    header.classList.toggle('sticky', window.scrollY > 100);
+});
+
+   
+    
+  
+
+    
+
+     
+           
