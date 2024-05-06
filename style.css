@@ -317,7 +317,6 @@ span {
     position: relative;
     width: 25rem;
     height: 25rem;
-    border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -328,7 +327,7 @@ span {
 .about-img img {
     width: 70%;
     border-radius: 50%;
-    border: .2rem solid var(--main-color);
+    border: .2rem solid var(--bg-color);
     
 }
 
@@ -486,75 +485,6 @@ span {
 }
 
 /*CONTACT-FORM SECTION*/
-.contact-page {
-    padding-bottom: 10rem;    
-}
-
-#contact form {
-    margin-top: 40PX;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-   
-    
-}
-
-#contact form .input-box,
-#contact form .textarea-field {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3px;
-    margin-bottom: 10px;
-    flex-wrap: wrap;
-    width: 40%; 
-} 
-
-#contact .input-box input {
-    height: 5vh;
-}
-/*Finished c0ntact section*/
-#contact .field {
-    position: relative;
-    border: .2rem solid var(--main-color);
-    border-radius: 5px;
-    flex-grow: 1;
-    min-height: 16px;
-    min-width: 200px;
-    background-color: transparent;
-    padding: 7px; 
-    z-index: 1;
-    color: white;
-    transition: .5s;    
-}
-
-/* CSS to take out the input number Arrows*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-#contact .field[type=number] {
-    -moz-appearance: textfield;
-}
-
-#contact .field::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    z-index: -1;
-    transition: .5s;
-    
-}
-
-#contact .field:hover {
-    background: var(--secod-bg-color); 
-    
-}
 
     
 
@@ -572,6 +502,28 @@ input::-webkit-inner-spin-button {
     100% {
         width: 0;
     }
+}
+
+
+.contact-page .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:30vh;
+    font-size:20px;
+    background-color: var(--secod-bg-color);
+    margin-top: 10%;
+    gap: 20px;
+    
+}
+
+.container img {
+    border: 5px solid var(--secod-bg-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(239, 232, 232, 0.19);
+    background: var(--bg-color);
+    width: 100px;
+    margin-left: 200px;
+    opacity: .6;
 }
 
 /*FOOTER SECTION*/
