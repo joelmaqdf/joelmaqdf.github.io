@@ -36,12 +36,11 @@ menuIcon.onclick = () => {
     navBar.classList.toggle('active');
 }
 
-
-// Selecione as seções e os links de navegação
+//  Scroll section-Selecione as seções e os links de navegação
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('header nav a');
 
-// Função para verificar se a seção está visível na tela
+// Function to check if the section is visible on the screen
 function isSectionVisible(section) {
     const top = window.scrollY;
     const offset = section.offsetTop - 100;
@@ -49,7 +48,7 @@ function isSectionVisible(section) {
     return top >= offset && top < offset + height;
 }
 
-// Ative os links de navegação conforme o usuário rola a página
+// Activate the navigation links as the user scrolls the page
 function activateNavLinks() {
     sections.forEach((sec) => {
         if (isSectionVisible(sec)) {
@@ -64,13 +63,17 @@ function activateNavLinks() {
     });
 }
 
-// Adicione um evento de rolagem para chamar a função
+//Add a scroll event to call the function
 window.addEventListener('scroll', activateNavLinks);
 
-// Adicione a classe "sticky" ao cabeçalho quando o usuário rolar mais de 100 pixels
-const header = document.querySelector('header');
+// Add "sticky" class to header when user scrolls more than 100 pixels
+let header = document.querySelector('header');
 window.addEventListener('scroll', () => {
     header.classList.toggle('sticky', window.scrollY > 100);
+
+//remove toggle icon and navbar when click navbar links (scroll)
+menuIcon.classList.remove('bx-x');
+navBar.classList.remove('active');
 });
 
    
