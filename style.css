@@ -765,7 +765,6 @@ section#contact.contact-page {
   .contact-icon {
     display: flex;
     justify-self: center;
-
     margin-left: 50px;
   }
 }
