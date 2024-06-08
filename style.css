@@ -98,7 +98,7 @@ section {
   display: flex;
   align-items: center;
   padding: 0 9%;
-  background: url(./imagem/rosto.png) no-repeat;
+  background: url(./img/rosto.png) no-repeat;
   background-position: right;
   background-size: auto 100%;
 }
