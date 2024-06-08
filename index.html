@@ -6,27 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-
-   
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />-->
-    <!--Box icons-->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
     <title>Portfólio</title>
-
-
 </head>
 
 <body>
     <!--header-->
     <header class="header">
-        <a href="https://www.figma.com/files/recents-and-sharing/recently-viewed?fuid=1347282031622995417"
+        <a href="#" alt=""
             class="logo">Joelma.</a>
-
         <div class="bx bx-menu" id="menu-icon"></div>
-
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
@@ -47,26 +40,23 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum minus atque aperiam eligendi inventore
                 enim, itaque suscipit ducimus architecto? Nobis eveniet possimus sequi commodi odit, quod officia quos
                 accusantium optio.</p>
-
             <div class="btn-box">
-                <a href="#" class="btn">Hire me</a>
+                <a href="img/JoelmaCV1.0.pdf" alt="cv" target="_blank" class="btn">Hire me-CV</a>
                 <a href="#" class="btn">Let's Talk</a>
             </div>
         </div>
-
         <div class="home-icon">
-            <a href="#"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.figma.com/design/9wk6AiRvPb3mFtZLPn1fez/Portf%C3%B3lio-Joelma?t=9Ewq9qZfdN8b9EGI-0"><i class='bx bxl-figma'></i></a>
             <a href="#"><i class='bx bxl-linkedin'></i></a>
         </div>
-
         <div class="home-imgHover"></div>
     </section>
 
     <!--About section-->
     <section class="about" id="about">
-        <h2 class="heading"> About <span>Me</span></h2>
+        <h2 class="heading"> About <span> Me </span></h2>
         <div class="about-img">
-            <img src="./imagem/img-pessoal.png" alt="Foto pessoal">
+            <img src="./img/img-pessoal.png" alt="Foto pessoal">
             <span class="circle"></span>
         </div>
         <div class="about-content">
@@ -83,6 +73,7 @@
             </div>
         </div>
     </section>
+
     <!--Skills section-->
     <section class="skills" id="skills">
         <h2 class="heading"> My <span>Skills</span></h2>
@@ -95,39 +86,39 @@
     <!--Project section does with javascript-->
     <section class="projects" id="projects">
         <h2 class="heading"> My <span> Projects </span></h2>
-
-        <div class="card-row">
-            <div class="card">
-                <img src="" alt="">
-                <p></p>
+        <div class="flex">
+            <div class="img-port" style="background-image: url(img/projects/cake_design/cake_page.png);">
+                <div class="overlay">projec 1</div>
             </div>
-            <div class="card">
-                <img src="" alt="">
-                <p></p>
+            <div class="img-port" style="background-image: url(img/projects/flower/flower_page.png);">
+                <div class="overlay">
+                    <a href="img/projects/flower/flower_page.png">visualizar</a>
+                </div>
             </div>
-            <div class="card">
-                <img src="" alt="">
-                <p></p>
+            <div class="img-port" style="background-image: url(img/projects/cake_design/cake_page.png);">
+                <div class="overlay">projec 3</div>
             </div>
         </div>
     </section>
 
     <!--Section contact-->
     <section class="contact-page" id="contact">
+        <h2 class="heading"> My <span>Contact</span></h2>
         <div class="container">
-            <img class="imagem" src="imagem/img_JF 1.png" alt="Logo JF">
+            <img class="imagem" src="img/img_JF 1.png" alt="Logo JF">
             <div class="text">
                 <p class="item">joelma@gmail.com</p>
                 <div class="contact-icon">
-                    <a href="https://github.com/joelmaqdf/Site_Jo"><i class='bx bxl-github'></i></a>
-                    <a href="https://www.linkedin.com/in/joelma-queiroz-de-freitas-b7a537309"><i class='bx bxl-linkedin'></i></a>
-                </div>  
+                    <a href="https://github.com/joelmaqdf/Site_Jo.git" target="_blank"><i class='bx bxl-github'></i></a>
+                    <a href="https://www.linkedin.com/in/joelma-queiroz-de-freitas-b7a537309" target="_blank">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </div>
             </div>
         </div>
 
         <div class="btn-box">
             <a href="#" class="btn">messagem</a>
-
         </div>
     </section>
 
@@ -135,14 +126,12 @@
         <div class="footer-text">
             <p>Joelma Freitas&copy; 2024 | All Rights Reserved.</p>
         </div>
-
         <div class="footer-icon">
             <a href="#"><i class='bx bx-up-arrow-alt'></i></a>
         </div>
     </footer>
 
-    <script src="main.js"></script>
-
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
-
 </html>

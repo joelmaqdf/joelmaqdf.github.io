@@ -76,7 +76,6 @@ menuIcon.classList.remove('bx-x');
 navBar.classList.remove('active');
 });
 
-   
     
   
 
