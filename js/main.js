@@ -1,5 +1,4 @@
 //cards Images
-
 const skillsList = [
     {skillName: 'Flask', iconURL: 'https://img.icons8.com/nolan/64/flask.png'},
     {skillName: 'Javascript', iconURL: 'https://img.icons8.com/color/48/javascript--v1.png'},
@@ -76,10 +75,12 @@ menuIcon.classList.remove('bx-x');
 navBar.classList.remove('active');
 });
 
-    
+// Set year
+function setYear() {
+    const yearRef = document.getElementById('year');
+    const year = new Date().getFullYear();
+    yearRef.innerHTML = year;
+}
+
+setYear();
   
-
-    
-
-     
-           

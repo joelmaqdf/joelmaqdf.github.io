@@ -300,9 +300,9 @@ section {
   font-size: 5rem;
   margin-bottom: 3rem;
   text-align: center;
-}
+} 
 
-span {
+h2 span {
   color: var(--main-color);
 }
 
@@ -381,7 +381,6 @@ span {
 
 .coding h3 {
   padding-top: 30px;
-  
 }
 
 #skillsList {
@@ -472,12 +471,8 @@ section.projects .flex {
   font-size: 2rem;
   color: #fff;
   opacity: 0;
-  transition: .5s;
-  
-  
-  
+  transition: 0.5s;
 }
-
 
 .overlay:hover {
   opacity: 1;
@@ -515,15 +510,11 @@ section#contact.contact-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
-
 
 .contact-page h2.heading {
   margin-top: 80px;
 }
-
-
 
 .contact-page .container {
   display: flex;
@@ -782,7 +773,6 @@ section#contact.contact-page {
       text-align: center;
     }
 
-    
     .contact-page .container {
       display: flex;
       align-items: center;
