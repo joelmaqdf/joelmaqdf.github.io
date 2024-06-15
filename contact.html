@@ -1,66 +1,135 @@
-<!DOCTYPE html> <!-- Declara o tipo de documento HTML -->
-<html lang="en"> <!-- Declara a linguagem do documento como inglês -->
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres como UTF-8 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a escala inicial para dispositivos móveis -->
-    <title>Contact Form</title> <!-- Define o título da página -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Form</title>
 </head>
+
+<style>
+    :root {
+    --bg-color: #081b29;
+    --secod-bg-color: #112e42;
+    --text-color: #ededed;
+    --main-color: #089cdc;
+    --box-chadow: #90aef2;
+    }
+ 
+    * {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+        font-family: sans-serif
+    }
+
+    body {
+        background-color: var(--secod-bg-color);
+        height: 100vh;    
+    }
+
+    h1 {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .contact {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contact span {
+        color: #089cdc;
+    }
+
+    .contact form {
+        max-width: 70rem;
+        margin: 0 auto;
+        text-align: center;
+        box-shadow: 0 0 1em rgb(168, 167, 166) ;
+        padding: 30px;
+    }
+
+    .contact form .input-box {
+        position: relative;
+       
+    }
+
+    .contact form .input-box .input-field {
+        position: relative;
+        margin: .8rem 0;
+       
+    }
+    .contact form .input-box .input-field input, .contact form .textarea-field textarea {
+       width: 100%;
+       height: 100%;
+       padding: .5rem;
+       color: #fff8f8;
+       font-size: .9rem;
+       background-color: transparent;
+       border-radius: .6rem;
+       border: .1rem solid var(--main-color);
+    }
+
+    .contact form .input-box .input-field input::placeholder, .contact form .textarea-field textarea::placeholder {
+        color: var(--text-color);
+    }
+
+    .contact form .textarea-field {
+        margin: .8rem 0 2.7rem;
+        display: flex;
+    }
+
+    .contact form .textarea-field textarea {
+        resize: none;
+    }
+   
+    button.btn {
+        width: 10rem;
+        height: 3rem;
+        background-color: #089cdc;
+        border: none;
+        color: var(--text-color);
+        border-radius: 5px;
+        font-size: 15px;
+        transition: 1s;
+        opacity: .8;
+    }
+
+    button.btn:hover {
+        box-shadow: 0 0 1em rgb(168, 167, 166);
+    }   
+</style>
+
 <body>
-    <h2>Contact Us</h2> <!-- Título da seção de contato -->
-    <form id="contactForm" action="#" method="POST"> <!-- Formulário de contato -->
-        <label for="name">Name:</label><br> <!-- Rótulo para o campo de nome -->
-        <input type="text" id="name" name="name" required><br><br> <!-- Campo de entrada para o nome -->
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact <span>Me!</span></h1>
+        <form  id="contactForm" action="#">
+            <div class="input-box">
+                <div class="input-field">
+                    <input type="text" id="name" name="name"  autocomplete="name"   placeholder="Full Name" required>
+                </div>
+                <div class="input-field">
+                    <input type="email" id="email" name="email" autocomplete="email"  placeholder="Email" required>
+                </div>
+            </div>
+            <div class="textarea-field">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+            </div>
+            <div class="btn-box btns">
+                <button type="submit" class="btn" value="submit">Submit</button>
+            </div>
+       </form>
+    </section>
 
-        <label for="email">Email:</label><br> <!-- Rótulo para o campo de email -->
-        <input type="email" id="email" name="email" required><br><br> <!-- Campo de entrada para o email -->
-
-        <label for="message">Message:</label><br> <!-- Rótulo para o campo de mensagem -->
-        <textarea id="message" name="message" rows="4" required></textarea><br><br> <!-- Campo de entrada para a mensagem -->
-
-        <input type="submit" value="Submit"> <!-- Botão de envio do formulário -->
-    </form>
-
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevenir o formulário de enviar normalmente
-            console.log('%USER_ID%');
-            var formData = new FormData(this); // Obter os dados do formuláriod
-            if('%USER_ID%' === '%\USER_ID\%') {
-                event.preventDefault();
-                const title = formData.get('name');
-                const message = formData.get('message');
-                window.open(`mailto:joelmaqdf@gmail.com?subject=${title}&body=${message}`);
-                return;
-            }s
-            var data = { // Preparar os dados para enviar por email
-                service_id: 'gmailMessage', // ID do serviço de email
-                template_id: 'template_oouvpia', // ID do modelo de email
-                user_id: '%USER_ID%', //'TMxr3AJo9vOeebFBN' ID do usuário
-                template_params: { // Parâmetros do modelo de email
-                    'username': formData.get('name'), // Nome do remetente
-                    'email': formData.get('email'), // Email do remetente
-                    'message': formData.get('message') // Mensagem do remetente
-                }
-            };
-            
-            fetch('https://api.emailjs.com/api/v1.0/email/send', { // Enviar os dados para a API do EmailJS
-                method: 'POST', // Método da requisição
-                headers: {
-                    'Content-Type': 'application/json' // Tipo de conteúdo da requisição
-                },
-                body: JSON.stringify(data) // Converter os dados para JSON
-            })
-            .then(function(response) { // Lidar com a resposta da requisição
-                if (response.ok) { // Se a resposta for bem-sucedida
-                    alert('Your mail is sent!'); // Alerta de sucesso
-                } else {
-                    alert('Oops... ' + response.statusText); // Alerta de erro com a mensagem de erro da resposta
-                }
-            })
-            .catch(function(error) { // Capturar erros de requisição
-                alert('Oops... ' + error); // Alerta de erro com a mensagem de erro
-            });
-        });
-    </script>
+    <script type="module" src="./js/apiKeys.js"></script>
+    <script type="module" src="./js/contact.js"></script>
 </body>
+
+
 </html>

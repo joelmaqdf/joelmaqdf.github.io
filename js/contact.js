@@ -1,41 +1,49 @@
-import EMAIL_USER_ID from "./apiKeys";
+/*
+* Require the apiKeys file with the const EMAIL_USER_ID
+* The EMAIL_USER_ID contain the '/api.emailjs.com' secret key
+*/
+import EMAIL_USER_ID from "./apiKeys.js" 
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir o formulário de enviar normalmente
-    var formData = new FormData(this); // Obter os dados do formuláriod
+    event.preventDefault();
+    var formData = new FormData(this);
+
     if(!EMAIL_USER_ID) {
+        // Follow with the user app email
         event.preventDefault();
         const title = formData.get('name');
         const message = formData.get('message');
-        window.open(`mailto:joelmaqdf@gmail.com?subject=${title}&body=${message}`);
+        window.open(`mailto:joelmaqdf.dev@gmail.com?subject=${title}&body=${message}`);
         return;
     }
-    var data = { // Preparar os dados para enviar por email
-        service_id: 'gmailMessage', // ID do serviço de email
-        template_id: 'template_oouvpia', // ID do modelo de email
-        user_id: '%USER_ID%', //'TMxr3AJo9vOeebFBN' ID do usuário
-        template_params: { // Parâmetros do modelo de email
-            'username': formData.get('name'), // Nome do remetente
-            'email': formData.get('email'), // Email do remetente
-            'message': formData.get('message') // Mensagem do remetente
+
+    // Use the email service request
+    var data = {
+        service_id: 'gmailMessage',
+        template_id: 'template_oouvpia',
+        user_id: EMAIL_USER_ID,
+        template_params: {
+            'username': formData.get('name'),
+            'email': formData.get('email'),
+            'message': formData.get('message')   
         }
     };
     
-    fetch('https://api.emailjs.com/api/v1.0/email/send', { // Enviar os dados para a API do EmailJS
-        method: 'POST', // Método da requisição
+    fetch('https://api.emailjs.com/api/v1.0/email/send', {
+        method: 'POST',
         headers: {
-            'Content-Type': 'application/json' // Tipo de conteúdo da requisição
+            'Content-Type': 'application/json'
         },
-        body: JSON.stringify(data) // Converter os dados para JSON
+        body: JSON.stringify(data)
     })
-    .then(function(response) { // Lidar com a resposta da requisição
-        if (response.ok) { // Se a resposta for bem-sucedida
-            alert('Your mail is sent!'); // Alerta de sucesso
+    .then((response) => {
+        if (response.ok) {
+            alert('Your mail is sent!');
         } else {
-            alert('Oops... ' + response.statusText); // Alerta de erro com a mensagem de erro da resposta
+            alert('Oops... ' + response.statusText);
         }
     })
-    .catch(function(error) { // Capturar erros de requisição
-        alert('Oops... ' + error); // Alerta de erro com a mensagem de erro
+    .catch(function(error) {
+        alert('Oops... ' + error);
     });
 });
