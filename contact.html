@@ -34,6 +34,11 @@
         font-size: 2.5rem;
         margin-bottom: 20px;
     }
+    
+    input:-webkit-autofill { 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: white !important;
+    }
 
     .contact {
         height: 100%;
@@ -57,7 +62,6 @@
 
     .contact form .input-box {
         position: relative;
-       
     }
 
     .contact form .input-box .input-field {
@@ -127,7 +131,6 @@
        </form>
     </section>
 
-    <script type="module" src="./js/apiKeys.js"></script>
     <script type="module" src="./js/contact.js"></script>
 </body>
 

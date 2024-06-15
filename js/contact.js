@@ -1,8 +1,13 @@
 /*
-* Require the apiKeys file with the const EMAIL_USER_ID
+* Require the apiKeys file, edit _apiKeys.js
 * The EMAIL_USER_ID contain the '/api.emailjs.com' secret key
 */
-import EMAIL_USER_ID from "./apiKeys.js" 
+let EMAIL_USER_ID;
+let EMAIL;
+import('./env.js').then((keySecret) => {
+    EMAIL_USER_ID = keySecret.default.emailSecretKey || undefined;
+    EMAIL = keySecret.default.email || undefined;
+});
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault();
@@ -13,7 +18,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         event.preventDefault();
         const title = formData.get('name');
         const message = formData.get('message');
-        window.open(`mailto:joelmaqdf.dev@gmail.com?subject=${title}&body=${message}`);
+        window.open(`mailto:${EMAIL || ''}?subject=${title}&body=${message}`);
         return;
     }
 
