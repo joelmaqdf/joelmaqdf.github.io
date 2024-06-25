@@ -1,42 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<style>
-    html, body {
-        padding: 0;
-        margin: 0;
-    }
-    .projectCard {
-        background-color: rgba(255, 255, 255, 0.95);
-        border-radius: 10px;
-        position: fixed;
-        top: 25%;
-        width: 50%;
-        left: 25%;
-        padding: 15px 30px;
-    }
-    #projectImage {
-        width: 100%;
+  </head>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      background-color: rgb(238, 234, 234);
+      color: #717273;
     }
 
-</style>
-<body>
+    .project {
+      width: 70vw;
+    
+    }
+    .projectCard {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      position: fixed;
+      top: 10%;
+      width: 30%;
+      left: 65%;
+      padding: 30px 30px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    @media (max-width: 568px){
+      .projectCard {
+        top: 2px;
+    
+      }
+      #description {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 388px){
+      .projectCard {
+       top: 0; 
+       font-size: 1rem;
+       padding: 5px; 
+      }
+
+      h1 {
+        font-size: .5rem;
+        
+      }
+
+      #projectImage {
+        height: 100vh;
+      }
+     
+      }
+
+    .itens {
+      color: rgb(73, 72, 74);
+      font-size: 20px;
+    }
+
+    .projectCard h1 {
+      font-size: 25px;
+      color: rgb(113, 114, 115);
+    }
+
+    #projectImage {
+      width: 100%;
+      opacity: 0.8;
+    }
+
+    #technologies {
+      width: 100%;
+      margin-bottom: 10px;
+     
+    }
+
+    p.tag {
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      position: relative;
+      margin: 0 16px 8px 15px;
+      padding: 0 10px 0 12px;
+      background-color: #e04848;
+      color: #f3f2f3;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    p.tag::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -12px;
+      width: 0;
+      height: 0;
+      border-color: transparent #4b09c5 transparent transparent;
+      border-style: solid;
+      border-width: 12px 12px 12px 0;
+    }
+
+    p.tag:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 1px;
+      float: left;
+      width: 5px;
+      height: 5px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #fff;
+      -webkit-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+      box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    #projectLink {
+      border-radius: 5px;
+      padding: 3px 10px;
+      background-color: rgb(146, 6, 146);
+      color: #f3f2f3;
+      transition: 0.3s;
+    }
+
+    #projectLink:hover {
+      background-color: #4b09c5;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+  <body>
     <section class="project">
-        <img id="projectImage" src="./img/projects/cake_design/cake_page.png">
-        <div class="projectCard">
-            <p>Description</p>
-            <p id="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aliquid, omnis aut ipsa numquam, nobis veritatis rerum error tempore esse cupiditate? Sunt enim reprehenderit dolores, odio similique ad temporibus aperiam!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aliquid, omnis aut ipsa numquam, nobis veritatis rerum error tempore esse cupiditate? Sunt enim reprehenderit dolores, odio similique ad temporibus aperiam!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aliquid, omnis aut ipsa numquam, nobis veritatis rerum error tempore esse cupiditate? Sunt enim reprehenderit dolores, odio similique ad temporibus aperiam!Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur aliquid, omnis aut ipsa numquam, nobis veritatis rerum error tempore esse cupiditate? Sunt enim reprehenderit dolores, odio similique ad temporibus aperiam!
-            </p>
-            <p>Technologies</p>
-            <div id="technologies"></div>
-            <button id="projectLink">Go to page</button>
-        </div>
+      <img id="projectImage" src="./img/projects/cake_design/cake_page.png" />
+      <div class="projectCard">
+        <h1>Description</h1>
+        <p id="description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          aliquid, omnis aut ipsa numquam, nobis veritatis rerum error tempore
+          esse cupiditate? Sunt enim reprehenderit dolores, odio similique ad
+          temporibus aperiam! Lorem ipsum dolor sit amet consectetur adipisicing
+          elit. Consequuntur aliquid, omnis aut ipsa numquam, nobis veritatis
+          rerum error tempore esse cupiditate? Sunt enim reprehenderit dolores,
+          odio similique ad temporibus aperiam! Lorem ipsum dolor sit amet
+          consectetur adipisicing elit. Consequuntur aliquid, omnis aut ipsa
+          numquam, nobis veritatis rerum error tempore esse cupiditate? Sunt
+          enim reprehenderit dolores, odio similique ad temporibus aperiam!Lorem
+          ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+          aliquid, omnis aut ipsa numquam, nobis veritatis rerum error tempore
+          esse cupiditate? Sunt enim reprehenderit dolores, odio similique ad
+          temporibus aperiam!
+        </p>
+        <p>Technologies</p>
+        <div id="technologies"></div>
+        <a  id="projectLink">Go to page</a>
+      </div>
     </section>
-</body>
+    <script src="./js/project.js"></script>
+  </body>
 </html>
