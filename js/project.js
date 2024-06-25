@@ -20,6 +20,12 @@ const projectId = urlParams.get('name');
 const descriptionRef = document.getElementById('description');
 const technologiesRef = document.getElementById('technologies');
 const linkRef = document.getElementById('link');
+const technologyGradients= {
+    'HTML': 'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,52,1) 0%, rgba(180,5,5,1) 0%, rgba(204,28,8,1) 100%, rgba(234,88,48,1) 100%, rgba(252,116,62,1) 100%, rgba(252,176,69,1) 100%)',
+    'CSS': 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(16,111,204,1) 0%, rgba(47,61,215,1) 0%, rgba(38,75,212,1) 0%, rgba(20,139,232,1) 100%, rgba(7,186,247,1) 100%, rgba(0,212,255,0.11257002801120453) 100%)',
+    'JAVASCRIPT': 'linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,52,1) 0%, rgba(238,222,60,1) 0%, rgba(218,193,16,1) 100%, rgba(252,176,69,1) 100%)',
+    'BOOTSTRAP': 'linear-gradient(135deg, #6a0dad, #8a2be2, #6a0dad)'
+};
 
 
 function startUpPage() {
@@ -33,6 +39,7 @@ function startUpPage() {
         const tagElement = document.createElement('p');
         tagElement.classList.add('tag'); 
         tagElement.textContent = technologia; 
+        tagElement.style.background = technologyGradients[technologia.toUpperCase()] || '#CCCCCC'; // cor padrão caso a tecnologia não seja encontrada
         technologiesRef.appendChild(tagElement);
     });
 
