@@ -88,11 +88,3 @@ function setYear() {
 }
 
 setYear();
-
-//Read more button
-const readMoreButtonRef = document.getElementById('readMoreBtn');
-const readMoreTextRef = document.getElementById('readMoreText');
-
-readMoreButtonRef.addEventListener('click', () => {
-  readMoreTextRef.classList.toggle('expanded');
-})
