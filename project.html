@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Joelma Freitas - Projects</title>
+  </head>
+  <style>
+    html,
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: "Roboto", sans-serif;
+      background-color: rgb(238, 234, 234);
+      color: #717273;
+    }
+
+    .projectCard {
+      background-color: rgba(249, 249, 249, 0.95);
+      border-radius: 10px;
+      position: fixed;
+      top: 10%;
+      width: 30%;
+      right: 0;
+      padding: 30px 30px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      min-width: 380px;
+    }
+
+    .projectCard h1 {
+      font-size: 25px;
+      color: rgb(113, 114, 115);
+    }
+
+    #projectImage {
+      width: 70%;
+      opacity: 0.8;
+    }
+
+    #technologies {
+      width: 100%;
+      margin-bottom: 20px;
+      font-size: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      height: 24px;
+      line-height: 24px;
+      position: relative;
+      color: #fff;
+      margin: 0 16px 8px 15px;
+      padding: 0 10px 0 12px;
+      color: #f3f2f3;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    p.tag::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -12px;
+      width: 0;
+      height: 0;
+      border-color: transparent #4b09c5 transparent transparent;
+      border-style: solid;
+      border-width: 12px 12px 12px 0;
+    }
+
+    p.tag:after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      left: 3px;
+      float: left;
+      width: 5px;
+      height: 5px;
+      -webkit-border-radius: 50%;
+      border-radius: 50%;
+      background-color: #fff;
+      -webkit-box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+      box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    .link {
+      text-align: end;
+    }
+
+    #projectLink {
+      border-radius: 5px;
+      padding: 10px 15px;
+      background-color: rgb(0, 56, 187);
+      color: #f3f2f3;
+      transition: 0.3s;
+      text-decoration: none;
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    }
+
+    #projectLink:hover {
+      background-color: #6b4beb;
+      box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+        0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    @media (max-width: 568px) {
+      .projectCard {
+        min-width: auto;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+ 
+      #projectImage {
+        width: 100%;
+        opacity: 0.8;
+      }
+    }
+
+  </style>
+  <body>
+    <section class="project">
+      <img id="projectImage" src="./img/projects/cake_design/cake_page.png" />
+      <div class="projectCard">
+        <h1>Description</h1>
+        <p id="description"></p>
+        <h3>Technologies</h3>
+        <div id="technologies"></div>
+        <div class="link">
+          <a id="projectLink" target="_blank">Go to page</a>
+        </div>
+      </div>
+    </section>
+    <script src="./js/project.js"></script>
+  </body>
+</html>

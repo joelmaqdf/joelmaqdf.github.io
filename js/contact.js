@@ -64,6 +64,9 @@ form.addEventListener("submit", function (event) {
       if (response.ok) {
         showNotification("success", "Your email was sent!");
         form.reset();
+        setTimeout(function() {
+          window.location = "index.html";
+        }, 5000);
       } else {
         showNotification("error", "Oops... " + response.statusText);
       }
@@ -71,4 +74,5 @@ form.addEventListener("submit", function (event) {
     .catch(function (error) {
       showNotification("error", "Oops... " + error);
     });
+
 });
