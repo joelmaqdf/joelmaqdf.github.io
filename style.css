@@ -479,6 +479,13 @@ section.projects-page .flex {
   opacity: 1;
 }
 
+.overlay a {
+  padding: 10px 20px;
+  background-color: #ffffff82;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
 /*kEYFRAMES ANIMATION*/
 @keyframes homeBgText {
   0%,

@@ -7,7 +7,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Joelma Freitas - Projects</title>
   </head>
   <style>
     html,
@@ -19,60 +19,17 @@
       color: #717273;
     }
 
-    .project {
-      width: 70vw;
-    
-    }
     .projectCard {
       background-color: rgba(249, 249, 249, 0.95);
       border-radius: 10px;
       position: fixed;
       top: 10%;
       width: 30%;
-      left: 65%;
+      right: 0;
       padding: 30px 30px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    @media (max-width: 568px){
-      .projectCard {
-        top: 2px;
-        padding-bottom: 10px;
-    
-      }
-      #description {
-        font-size: 1rem;
-      }
-    }
-
-    @media (max-width: 388px){
-      .projectCard {
-       top: 0; 
-       font-size: 10px;;
-       padding-left: 3px; 
-       padding-top: 0%;
-       padding-bottom: 0;
-      }
-      h1 {
-        margin: 0;
-        
-      }
-
-      #projectImage {
-        height: 100vh;
-      }
-
-      .tec {
-        font-size: 15px;
-        color: rgb(49, 48, 48);
-        margin: 0%;
-      }
-
-      #projectLink {
-        display: none;
-      }
-     
+      min-width: 380px;
     }
 
     .projectCard h1 {
@@ -81,7 +38,7 @@
     }
 
     #projectImage {
-      width: 100%;
+      width: 70%;
       opacity: 0.8;
     }
 
@@ -89,7 +46,6 @@
       width: 100%;
       margin-bottom: 20px;
       font-size: 20px;
-     
     }
 
     .tag {
@@ -97,7 +53,7 @@
       height: 24px;
       line-height: 24px;
       position: relative;
-      color: #fff; 
+      color: #fff;
       margin: 0 16px 8px 15px;
       padding: 0 10px 0 12px;
       color: #f3f2f3;
@@ -105,7 +61,6 @@
       font-weight: bold;
     }
 
-   
     p.tag::before {
       content: "";
       position: absolute;
@@ -133,14 +88,20 @@
       box-shadow: -1px -1px 2px rgba(0, 0, 0, 0.4);
     }
 
-    
+    .link {
+      text-align: end;
+    }
 
     #projectLink {
       border-radius: 5px;
-      padding: 3px 10px;
+      padding: 10px 15px;
       background-color: rgb(0, 56, 187);
       color: #f3f2f3;
       transition: 0.3s;
+      text-decoration: none;
+      -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+      -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
     }
 
     #projectLink:hover {
@@ -148,31 +109,33 @@
       box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
         0 17px 50px 0 rgba(0, 0, 0, 0.19);
     }
+
+    @media (max-width: 568px) {
+      .projectCard {
+        min-width: auto;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+ 
+      #projectImage {
+        width: 100%;
+        opacity: 0.8;
+      }
+    }
+
   </style>
   <body>
     <section class="project">
       <img id="projectImage" src="./img/projects/cake_design/cake_page.png" />
       <div class="projectCard">
         <h1>Description</h1>
-        <p id="description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          aliquid, omnis aut ipsa numquam, nobis veritatis rerum error tempore
-          esse cupiditate? Sunt enim reprehenderit dolores, odio similique ad
-          temporibus aperiam! Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Consequuntur aliquid, omnis aut ipsa numquam, nobis veritatis
-          rerum error tempore esse cupiditate? Sunt enim reprehenderit dolores,
-          odio similique ad temporibus aperiam! Lorem ipsum dolor sit amet
-          consectetur adipisicing elit. Consequuntur aliquid, omnis aut ipsa
-          numquam, nobis veritatis rerum error tempore esse cupiditate? Sunt
-          enim reprehenderit dolores, odio similique ad temporibus aperiam!Lorem
-          ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
-          aliquid, omnis aut ipsa numquam, nobis veritatis rerum error tempore
-          esse cupiditate? Sunt enim reprehenderit dolores, odio similique ad
-          temporibus aperiam!
-        </p>
-        <p class="tec">Technologies</p>
+        <p id="description"></p>
+        <h3>Technologies</h3>
         <div id="technologies"></div>
-        <a  id="projectLink">Go to page</a>
+        <div class="link">
+          <a id="projectLink" target="_blank">Go to page</a>
+        </div>
       </div>
     </section>
     <script src="./js/project.js"></script>
