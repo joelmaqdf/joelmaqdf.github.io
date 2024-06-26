@@ -12,7 +12,7 @@ const PROJECTS = [
         name: 'Flower Design Project',
         description: 'This project was created to explore the bootstrap framework and practice code development and design.',
         technologies: ['HTML', 'CSS', 'Javascript', 'Bootstrap'],
-        link: '',
+        link: 'https://jqf-design.000webhostapp.com/flower_design/index.html',
         imgPath:'img/projects/flower/flower_page.png',    
     }
 ]

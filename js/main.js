@@ -41,7 +41,7 @@ menuIcon.onclick = () => {
   navBar.classList.toggle("active");
 };
 
-//  Scroll section-Selecione as seções e os links de navegação
+// Scroll section by navbar click
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll("header nav a");
 
@@ -71,12 +71,11 @@ function activateNavLinks() {
 //Add a scroll event to call the function
 window.addEventListener("scroll", activateNavLinks);
 
-// Add "sticky" class to header when user scrolls more than 100 pixels
 let header = document.querySelector("header");
 window.addEventListener("scroll", () => {
   header.classList.toggle("sticky", window.scrollY > 100);
 
-  //remove toggle icon and navbar when click navbar links (scroll)
+  // Remove toggle icon and navbar when click navbar links (scroll)
   menuIcon.classList.remove("bx-x");
   navBar.classList.remove("active");
 });
@@ -89,3 +88,11 @@ function setYear() {
 }
 
 setYear();
+
+//Read more button
+const readMoreButtonRef = document.getElementById('readMoreBtn');
+const readMoreTextRef = document.getElementById('readMoreText');
+
+readMoreButtonRef.addEventListener('click', () => {
+  readMoreTextRef.classList.toggle('expanded');
+})
