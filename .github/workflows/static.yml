@@ -39,10 +39,11 @@ jobs:
           # Upload entire repository
           path: '.'
       - name: Setup env file
-        run: echo "const env = {
-          emailSecretKey:'${{ secrets.EMAIL_TOKEN }}',
-          email:'joelmaqdf.dev@gmail.com',
-          }; 
+        run: |
+          echo "const env = {
+            emailSecretKey: '${{ secrets.EMAIL_TOKEN }}',
+            email: 'joelmaqdf.dev@gmail.com',
+          };
           export default env;" > ./js/env.js
       - name: Deploy to GitHub Pages
         id: deployment
