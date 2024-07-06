@@ -43,7 +43,7 @@ jobs:
           emailSecretKey:'${{ secrets.EMAIL_TOKEN }}',
           email:'joelmaqdf.dev@gmail.com',
           }; 
-          export default env;" > env.js
+          export default env;" > ./js/env.js
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
