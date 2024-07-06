@@ -46,7 +46,9 @@ jobs:
           };
           export default env;" > ./js/env.js
       - name: List files and folders
-        run: ls -R
+        run: cd ./js ls -R
+      - name: Display env.js content
+        run: cat ./js/env.js
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
