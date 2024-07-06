@@ -45,10 +45,6 @@ jobs:
         with:
           # Upload entire repository
           path: '.'
-      - name: List files and folders
-        run: ls ./js
-      - name: Display env.js content
-        run: cat ./js/env.js
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
