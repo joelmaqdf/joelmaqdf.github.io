@@ -4,7 +4,7 @@ const PROJECTS = [
         name: 'Cake Design Project',
         description: 'CakeJF is a web project dedicated to the art of custom cakes. By blending Bootstrap elegance with the creativity of a cake designer, this site provides a delightful experience for visitors.This project was created to explore the bootstrap framework and practice code development and design.',
         technologies: ['HTML', 'CSS', 'JAVASCRIPT', 'BOOTSTRAP'],
-        link: 'https://whimsical-fox-436c32.netlify.app/',
+        link: 'https://jf-cake-design.netlify.app/',
         imgPath:'img/projects/cake_design/cake_page.png',
     },
     {
@@ -12,8 +12,8 @@ const PROJECTS = [
         name: 'Flower Design Project',
         description: 'FlowersJF is a web project was created to explore the bootstrap framework and practice code development and design. This project allowed me to combine my love for flowers with my technical skills, resulting in a delightful online experience for flower enthusiasts.',
         technologies: ['HTML', 'CSS', 'Javascript', 'Bootstrap'],
-        link: 'https://jqf-design.000webhostapp.com/flower_design/index.html',
-        imgPath:'img/projects/flower/flower_page.png',    
+        link: 'https://jf-flower.netlify.app/',
+        imgPath:'img/projects/flower/flower_page.png',
     }
 ]
 
