@@ -545,8 +545,8 @@ section#contact.contact-page {
   width: 120px;
 }
 
-.container .text p {
-  font-size: 20px;
+.container .text {
+  font-size: 2rem;
   color: #d2d4d7;
 }
 
@@ -563,13 +563,6 @@ section#contact.contact-page {
   align-items: center;
   font-size: 25px;
   color: rgb(236, 235, 235);
-}
-
-.contact-page .btn-box {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
 }
 
 /*FOOTER SECTION*/
@@ -756,12 +749,25 @@ section#contact.contact-page {
 }
 
 @media (max-width: 462px) {
+  html {
+    font-size: 50%;
+  }
   .home-content h1 {
     font-size: 5.2rem;
   }
 
   .skills {
     padding: 10rem 4% 5rem;
+  }
+
+  .container .item {
+    font-size: 1.7rem;
+  }
+
+  .contact-icon {
+    display: flex;
+    justify-content: center;
+    width: 100%;
   }
 
   .footer {
@@ -786,13 +792,19 @@ section#contact.contact-page {
     text-align: center;
   }
 
-  .container p.item {
-    font-size: 2rem;
+  .container .item {
+    font-size: 1.7rem;
   }
 
-  .contact-icon {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  .contact-page .container {
+    height: 35vh;
+  }
+
+  .container .text {
+    margin-bottom: 20px;
+  }
+
+  .container .imagem {
+    margin-top: 20px;
   }
 }
